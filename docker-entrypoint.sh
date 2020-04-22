@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 sed -i 's/localhost/'${HOST}'/g' /usr/src/app/web/vue/dist/UIconfig.js
