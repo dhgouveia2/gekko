@@ -11,4 +11,6 @@ RUN npm install --production; \
 
 VOLUME /gekko/history
 
+EXPOSE 3000
+
 CMD ["node", "gekko","--config", "config.js", "--ui"]
