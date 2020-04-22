@@ -34,4 +34,5 @@ services:
       - postgres
 volumes:
   gekko_history:
-  postgres_data:```
+  postgres_data:
+  ```
