@@ -19,8 +19,6 @@ COPY docker-entrypoint.sh .
 
 VOLUME /gekko/history
 
-
-EXPOSE 3000
 RUN chmod +x /gekko/docker-entrypoint.sh
 ENTRYPOINT ["/gekko/docker-entrypoint.sh"]
 
