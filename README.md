@@ -16,6 +16,7 @@ services:
       - POSTGRES_PASSWORD=pass
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    network_mode: bridge
 
   gekko:
     image: dhgouveia2/gekko
@@ -25,13 +26,15 @@ services:
       - ./config.js:/gekko/config.js
     environment:
      - HOST=0.0.0.0
-     - PORT=3000
+     - PORT=3101
      - USE_SSL=0
      - MEMORYNODE=512
-    ports: 
-      - 3000:3000
+    ports:
+      - 3101:3101
     depends_on:
       - postgres
+    network_mode: bridge
+
 volumes:
   gekko_history:
   postgres_data:
