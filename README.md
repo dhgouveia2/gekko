@@ -25,11 +25,11 @@ services:
       - ./config.js:/gekko/config.js
     environment:
      - HOST=0.0.0.0
-     - PORT=3101
+     - PORT=3000
      - USE_SSL=0
      - MEMORYNODE=512
     ports: 
-      - 3101:3101
+      - 3000:3000
     depends_on:
       - postgres
 volumes:
