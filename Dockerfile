@@ -20,7 +20,7 @@ RUN npm install --production; \
 RUN npm install --only=production; \
     npm audit fix; \
     npm cache clean --force ; \
-    cd /gekko/exchange ;
+    cd /gekko/exchange ; \
     npm install --only=production; \
     npm audit fix; \
     npm cache clean --force
