@@ -15,6 +15,15 @@ RUN npm install --production; \
     # install TA-lib, Redis, PostgreSQL modules
     npm install talib@1.0.2 redis@0.10.0 pg bitfinex-api-node@1.0.2 --production && \
     npm cache clean --force
+    
+    # fix dependencies
+RUN npm install --only=production; \
+    npm audit fix; \
+    npm cache clean --force ; \
+    cd /gekko/exchange ;
+    npm install --only=production; \
+    npm audit fix; \
+    npm cache clean --force
 
 COPY docker-entrypoint.sh .
 
