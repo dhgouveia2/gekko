@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sed -i 's/127.0.0.1/'${HOST}'/g' /gekko/web/vue/dist/UIconfig.js
+sed -i 's/127.0.0.1/'0.0.0.0'/g' /gekko/web/vue/dist/UIconfig.js
 sed -i 's/localhost/'${HOST}'/g' /gekko/web/vue/dist/UIconfig.js
 sed -i 's/3000/'${PORT}'/g' /gekko/web/vue/dist/UIconfig.js
 sed -i 's/sqlite/'${DB}'/g' /gekko/web/vue/dist/UIconfig.js
