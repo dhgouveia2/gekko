@@ -18,11 +18,11 @@ RUN npm install --production; \
     
     # fix dependencies
 RUN npm install --only=production; \
-    npm audit fix; \
+    npm audit fix --force; \
     npm cache clean --force ; \
     cd /gekko/exchange ; \
     npm install --only=production; \
-    npm audit fix; \
+    npm audit fix --force; \
     npm cache clean --force
 
 COPY docker-entrypoint.sh .
