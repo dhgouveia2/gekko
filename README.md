@@ -27,6 +27,7 @@ services:
     environment:
      - HOST=0.0.0.0
      - PORT=3101
+     - DB=postgresql
      - USE_SSL=0
      - MEMORYNODE=512
     ports:
