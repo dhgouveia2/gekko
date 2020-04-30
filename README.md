@@ -24,6 +24,7 @@ services:
     volumes:
       - gekko_history:/gekko/history
       - ./config.js:/gekko/config.js
+      - ./baseConfig.js:/gekko/web/routes/baseConfig.js
     environment:
      - HOST=0.0.0.0
      - PORT=3101
